@@ -1,0 +1,98 @@
+#restartBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  display: none; 
+  padding: 20px 40px; 
+  font-size: 18px; 
+  z-index: 1; 
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#scoreboard {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#status {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 50px;
+  font-weight: bold; /* Set a specific height to align vertically */
+}
+.score {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 2px;
+  background-color: white;
+  border: 2px solid #000;
+  font-size: 50px;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+}
+
+/* Common styles for both light and dark mode */
+/* ... */
+
+body.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.dark-mode #board {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+body.light-mode .cell {
+  border-color: #000000; /* Border color is black in light mode */
+  background-color: #ffffff;
+  color: #000000; /* X and O color for light mode */
+}
+
+/* Dark Mode */
+body.dark-mode .cell {
+  border-color: #ffffff; /* Border color is white in dark mode */
+  background-color: #000000;
+  color: #ffffff; /* X and O color for dark mode */
+}
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Set a lower z-index to place it behind other elements */
+}
+
